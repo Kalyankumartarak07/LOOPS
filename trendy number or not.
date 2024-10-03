@@ -10,3 +10,15 @@ Sample Input:
 791
 Sample Output:
 Trendy Number
+ANS:
+
+def is_trendy_number(n):
+    if 100 <= n <= 999:
+        n_str = str(n)
+        middle_digit = int(n_str[1])  # Get the middle digit
+        if middle_digit % 3 == 0:
+            return "Trendy Number"
+    return "Not a Trendy Number"
+n = int(input("Enter a number: "))
+result = is_trendy_number(n)
+print(result)
